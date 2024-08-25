@@ -64,6 +64,8 @@ contract TransferUSDC is OwnerIsCreator {
         onlyAllowlistedChain(_destinationChainSelector)
         returns (bytes32 messageId)
     {
+        // GasLimit times 10% for gas overhead
+        _gasLimit = (_gasLimit * 110) / 100;
         Client.EVMTokenAmount[]
             memory tokenAmounts = new Client.EVMTokenAmount[](1);
         Client.EVMTokenAmount memory tokenAmount = Client.EVMTokenAmount({
