@@ -4,4 +4,9 @@ out = "out"
 libs = ["lib"]
 remappings = ['@chainlink/contracts-ccip/=lib/ccip/contracts/src/v0.8/', 'forge-std=lib/forge-std/src']
 
+[rpc_endpoints]
+fujiSepolia = "${SEPOLIA_RPC_URL}"
+
+
+
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
